@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+webkit:
+  charset: UTF-8
+
+base64:
+  expires:
+    lifespan: 1
+    cron-expression: "0 0 * * * *"
+
+---
+spring:
+  datasource:
+    url: jdbc:h2:file:~/base64
+    username: sa
+    password:
+  profiles: dev
+  h2:
+    console:
+      path: /h2/console
+      enabled: true
+  jpa:
+    hibernate.ddl-auto: create-drop
