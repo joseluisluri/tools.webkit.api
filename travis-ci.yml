@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - oraclejdk8
+install:
+  - maven
+deploy:
+  provider: script
+  script: "cp .travis-ci.settings.xml $HOME/.m2/settings.xml && mvn deploy"
+  skip_cleanup: true
