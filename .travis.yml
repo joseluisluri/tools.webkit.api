@@ -13,4 +13,4 @@ addons:
     token:
       secure: $SONARCLOUD_TOKEN
 script:
-  - sonar-scanner
+  - mvn sonar:sonar
