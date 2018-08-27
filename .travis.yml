@@ -13,4 +13,4 @@ addons:
     token:
       secure: $SONARCLOUD_TOKEN
 script:
-  - mvn sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
